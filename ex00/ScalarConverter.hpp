@@ -5,6 +5,11 @@
 class ScalarConverter {
 	public:
 		static void convert (const std::string &input);
+
+
+	class ConvertionException: public std::exception {};
+	class DisplayableConvertionException: public std::exception {};
+
 };
 
 

@@ -1,10 +1,10 @@
 NAME = SCALAR-CONVERTER-00
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -MD
+CFLAGS = -std=c++98 -g3 -MD
 RM = @rm -rf
 CC = @c++
 DIR = @mkdir -p
 PRINT = @echo
-FILES = ScalarConverter
+FILES = ScalarConverter \
 
 OBJS = $(addsuffix .o, $(addprefix .Objects/, $(FILES)))
 DPDS = $(addsuffix .d, $(addprefix .Objects/, $(FILES)))
