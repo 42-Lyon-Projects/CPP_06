@@ -4,7 +4,8 @@ RM = @rm -rf
 CC = @c++
 DIR = @mkdir -p
 PRINT = @echo
-FILES = ScalarConverter \
+FILES = Human		\
+		Serializer	\
 		main
 
 OBJS = $(addsuffix .o, $(addprefix .Objects/, $(FILES)))
