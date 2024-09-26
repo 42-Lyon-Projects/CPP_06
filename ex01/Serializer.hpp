@@ -1,7 +1,7 @@
 #ifndef SERIALIZER_HPP
 #define SERIALIZER_HPP
 
-#include "Human.hpp"
+#include "Data.hpp"
 #include <stdint.h>
 
 class Serializer {
@@ -12,8 +12,8 @@ class Serializer {
 		virtual ~Serializer();
 
 	public:
-		static uintptr_t serialize(Human* ptr);
-		static Human* deserialize(uintptr_t raw);
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
 
 };
 

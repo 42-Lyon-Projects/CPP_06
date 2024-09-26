@@ -1,19 +1,16 @@
-#include "ScalarConverter.hpp"
+#include <iostream>
+#include "Serializer.hpp"
 
-static bool isNum(const std::string &line)
+int main()
 {
-	char* errorPtr;
-	std::strtod(line.c_str(), &errorPtr);
-	return errorPtr != line.c_str();
-}
+	Data *human = new Data();
+	std::cout << human->getFirstName() << " " << human->getLastName() << " " << human->getProfession() << std::endl;
+	uintptr_t ptr = Serializer::serialize(human);
 
-int main(int argc, char **argv)
-{
-	if (argc != 2)
-		return 1;
-	std::cout << isNum(argv[1]) << std::endl;
-	if (!isNum(argv[1]))
-		return 1;
-	ScalarConverter::convert(argv[1]);
-	return 0;
+	std::cout << ptr << std::endl;
+
+	Data *human2 = Serializer::deserialize(ptr);
+	std::cout << human2->getFirstName() << " " << human2->getLastName() << " " << human2->getProfession() << std::endl;
+
+	delete human2;
 }

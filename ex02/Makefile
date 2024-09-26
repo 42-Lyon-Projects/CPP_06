@@ -1,11 +1,13 @@
-NAME = SERIALIZER-00
+NAME = DYNAMIC-00
 CFLAGS = -Werror -Wextra -Wall -std=c++98 -g3 -MD
 RM = @rm -rf
 CC = @c++
 DIR = @mkdir -p
 PRINT = @echo
-FILES = Data		\
-		Serializer	\
+FILES = A		\
+		B		\
+		C		\
+		Base	\
 		main
 
 OBJS = $(addsuffix .o, $(addprefix .Objects/, $(FILES)))

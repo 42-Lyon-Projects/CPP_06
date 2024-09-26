@@ -1,8 +1,7 @@
-#include "Human.hpp"
-
+#include "Data.hpp"
 #include <iostream>
 
-Human::Human(const std::string &first_name, const std::string &last_name, const std::string &profession)
+Data::Data(const std::string &first_name, const std::string &last_name, const std::string &profession)
 {
 	this->first_name = first_name;
 	this->last_name = last_name;
@@ -10,12 +9,12 @@ Human::Human(const std::string &first_name, const std::string &last_name, const 
 	std::cout << "Human Constructor Called" << std::endl;
 }
 
-Human::Human(const Human &other)
+Data::Data(const Data &other)
 {
 	*this = other;
 }
 
-Human &Human::operator=(const Human &other)
+Data &Data::operator=(const Data &other)
 {
 	if (&other == this)
 		return *this;
@@ -25,23 +24,23 @@ Human &Human::operator=(const Human &other)
 	return *this;
 }
 
-Human::~Human()
+Data::~Data()
 {
 	std::cout << "Human Destructor Called" << std::endl;
 }
 
 
-std::string Human::getFirstName()
+std::string Data::getFirstName()
 {
 	return this->first_name;
 }
 
-std::string Human::getLastName()
+std::string Data::getLastName()
 {
 	return this->last_name;
 }
 
-std::string Human::getProfession()
+std::string Data::getProfession()
 {
 	return this->profession;
 }

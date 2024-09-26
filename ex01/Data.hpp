@@ -3,17 +3,17 @@
 
 #include <string>
 
-class Human {
+class Data {
 
 	private:
 		std::string first_name;
 		std::string last_name;
 		std::string profession;
 	public:
-		explicit Human(const std::string &first_name = "John", const std::string &last_name = "Lennon", const std::string &profession = "Musician");
-		Human(const Human &other);
-		Human&operator=(const Human &other);
-		~Human();
+		explicit Data(const std::string &first_name = "John", const std::string &last_name = "Lennon", const std::string &profession = "Musician");
+		Data(const Data &other);
+		Data&operator=(const Data &other);
+		~Data();
 	public:
 		std::string getFirstName();
 		std::string getLastName();
