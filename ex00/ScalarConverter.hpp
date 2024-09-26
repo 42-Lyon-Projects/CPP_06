@@ -6,6 +6,11 @@
 #include <cmath>
 
 class ScalarConverter {
+	private:
+		ScalarConverter();
+		ScalarConverter(ScalarConverter &other);
+		virtual ~ScalarConverter();
+
 	public:
 		static void convert (const std::string &input);
 };
